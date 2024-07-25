@@ -3,7 +3,15 @@ var prompt = require('prompt-sync')();
 
 let employeeDetails= [];
 
-
+/////////////////////////// ADDING NEW USER ////////////////////////////////
+function addUser(){
+    const newUserName = prompt("Enter Your Name : ");
+    const newUserid =  prompt("Enter Your UserID : ");
+    const newUserCity =  prompt("Enter Your City : ");
+    const newUserNumber =  prompt("Enter Your Number : ");
+    const newUserState =  prompt("Enter Your State : ");   
+    employeeDetails.push({name:newUserName,id:newUserid,city:newUserCity,number:newUserNumber,state:newUserState});    
+}
 
 while(1){console.log("Enter 1 to add User");
     console.log("Enter 2 to delete User");
