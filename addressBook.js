@@ -29,6 +29,19 @@ function deleteEmployee(){
     if(check == 0) console.log("Can`t Find User with this Name");
 }
 
+/////////////////////// DISPLAYING USER ////////////////////////////////////
+function displayEmployee(){
+    for(let i =0; i<employeeDetails.length; i++)
+    {
+       console.log("employee Number " + parseInt(i+1));
+       console.log("Name :" + employeeDetails[i].name);
+       console.log("Id :" +employeeDetails[i].id);
+       console.log("City :" +employeeDetails[i].city);
+       console.log("Number :" +employeeDetails[i].number);
+       console.log("State :" +employeeDetails[i].state);
+    }
+}
+
 
 while(1){console.log("Enter 1 to add User");
     console.log("Enter 2 to delete User");
