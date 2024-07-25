@@ -13,6 +13,23 @@ function addUser(){
     employeeDetails.push({name:newUserName,id:newUserid,city:newUserCity,number:newUserNumber,state:newUserState});    
 }
 
+///////////////// Deleting Employee Details ////////////////////////////////
+function deleteEmployee(){
+    const namee = prompt("Enter a Name to delete  :");
+    let check = 0;
+    for(let i =0; i<employeeDetails.length; i++)
+    {
+        if(employeeDetails[i].name == namee)
+        {
+            employeeDetails.splice(i,1);
+            check =1;
+            break;
+        }    
+    }
+    if(check == 0) console.log("Can`t Find User with this Name");
+}
+
+
 while(1){console.log("Enter 1 to add User");
     console.log("Enter 2 to delete User");
     console.log("Enter 3 to update User");
