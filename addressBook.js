@@ -43,6 +43,46 @@ function displayEmployee(){
 }
 
 
+////////////////////////////// UPDATE THE USER DETAILS ///////////////////////////////////////
+function updateUser()
+{
+    const headName = prompt("Enter the userName whose details You want to update :")
+    const result = employeeDetails.find(namee => namee.name === headName);
+    if(!result) {
+        console.log("User doesn't exist.")
+        return;
+    }
+    const upName = prompt("Enter Your Updated Name :");
+    const upId = prompt("Enter Your Updated Id :");
+    const upCity= prompt("Enter Your Updated CityName :");
+    const upNumber = prompt("Enter Your Updated Phone Number :");
+    const upState = prompt("Enter Your Updated state :");
+
+    if(result)
+    {
+        employeeDetails[i].name = upName;
+        employeeDetails[i].id = upId;
+        employeeDetails[i].city = upCity;
+        employeeDetails[i].state = upState;
+        employeeDetails[i].number = upNumber;
+    }
+
+    // for(let i =0; i<employeeDetails.length; i++)
+    // {
+    //     if(employeeDetails[i].name == headName)
+    //     {
+    //         employeeDetails[i].name = upName;
+    //         employeeDetails[i].id = upId;
+    //         employeeDetails[i].city = upCity;
+    //         employeeDetails[i].state = upState;
+    //         employeeDetails[i].number = upNumber;
+    //         break;
+    //     }
+    // }
+
+}
+
+
 while(1){console.log("Enter 1 to add User");
     console.log("Enter 2 to delete User");
     console.log("Enter 3 to update User");
